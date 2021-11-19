@@ -19,6 +19,9 @@ To test the PWA it is necessary to build the app and use a server to load the ap
 yarn serve
 ```
 
+## View proyect :rocket:
+[Deploy](https://christbm.github.io/recipes_pwa/)
+
 ## Resources and Links :fountain:
 [Main Typography](https://fonts.googleapis.com/css2?family=Pacifico&display=swap "Pacifico")
 

@@ -102,6 +102,6 @@ registerRoute(
 )
 
 registerRoute(
-  new RegExp( /^https?.*/ ),
+  new RegExp( /^https?:\/\/christbm.github.io\/recipes_pwa\/.*/ ),
   new NetworkFirst()
 )

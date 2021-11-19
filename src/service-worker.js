@@ -7,11 +7,12 @@
 // You can also remove this file if you'd prefer not to use a
 // service worker, and the Workbox build step will be skipped.
 
+import { CacheableResponse, CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+import { StaleWhileRevalidate, NetworkFirst, CacheFirst } from 'workbox-strategies';
 
 clientsClaim();
 
@@ -70,3 +71,37 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+registerRoute(
+  new RegExp(/^https?:\/\/www.themealdb.com\/images\/.*/),
+  new CacheFirst({
+    cacheName: 'img-cache',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0,200]
+      }) ,
+      new ExpirationPlugin({
+        maxEntries: 20,
+        maxAgeSeconds: 30*24*60*60,
+        purgeOnQuotaError: true
+      })
+    ]
+  })
+)
+
+registerRoute(
+  ({url}) => url.origin === 'https://fonts.googleapis.com',
+  new StaleWhileRevalidate({
+    cacheName: 'google-fonts-cache',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 20,
+        maxAgeSeconds: 30*24*60*60
+      })
+    ]
+  })
+)
+
+registerRoute(
+  new RegExp( /^https?.*/ ),
+  new NetworkFirst()
+)

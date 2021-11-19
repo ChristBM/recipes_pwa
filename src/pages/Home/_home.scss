@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-block-start: 60px;
+  padding-block-end: 40px;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,83 @@
+@use '../../styles/variables' as *;
+
+.timer {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-block-start: 60px;
+  padding-block-end: 40px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 50% 5px 5px;
+    grid-template-rows: 1fr 80px;
+    background-color: $white-color;
+    box-shadow: 0 0 5px $font-color;
+  }
+
+  &__input_container {
+    place-self: center;
+    grid-row: 1/2;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__input {
+    width: 80px;
+    height: 50px;
+    padding: 0 10px;
+    border-style: none;
+    outline: none;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    background-color: $white-color;
+    @include font-style(Helvetica, 600, 2.6rem, 0px, $font-color);
+  }
+
+  &__counter {
+    place-self: center;
+    grid-row: 1/2;
+    @include font-style(Helvetica, 600, 5rem, 1px, $main-color);
+  }
+
+  &__btns_container {
+    place-self: end;
+    grid-row: 2/3;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-block-end: 20px;
+    justify-content: space-evenly;
+  }
+
+  &__btn {
+    width: 90px;
+    height: 50px;
+    border-style: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: $main-color;
+    cursor: pointer;
+    @include font-style(Helvetica, 400, 2rem, 1px, $white-color);
+  }
+
+  &__btn:hover {
+    opacity: 0.9;
+  }
+
+  &__btn:active {
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+
+}

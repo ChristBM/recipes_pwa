@@ -1,0 +1,19 @@
+@use '../../styles/variables'as *;
+
+.timer_icon {
+  position: fixed;
+  top: 40px;
+  right: 0px;
+  z-index: 5;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.timer_icon:hover {
+  opacity: 1;
+}
+
+.timer_icon:active {
+  opacity: 1;
+  transform: scale(0.95);
+}

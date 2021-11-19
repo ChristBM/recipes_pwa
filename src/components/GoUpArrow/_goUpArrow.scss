@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.go_up {
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+  z-index: 5;
+  opacity: 0.8;
+  transform: rotate(180deg);
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: $white-color;
+}
+
+.go_up:hover {
+  opacity: 1;
+}

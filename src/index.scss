@@ -1,0 +1,15 @@
+/* Styles */
+@use './styles/globals';
+/* Components */
+@use './components/MainCard/mainCard';
+@use './components/GoUpArrow/goUpArrow';
+@use './components/TimerIcon/timerIcon';
+/* Containers */
+@use './containers/Header/header';
+/* Pages */
+@use './pages/Home/home';
+@use './pages/Category/category';
+@use './pages/Recipe/recipe';
+@use './pages/Timer/timer';
+@use './pages/NotFound/notFound';
+/* Layot */

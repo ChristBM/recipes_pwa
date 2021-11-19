@@ -17,10 +17,10 @@ export default function App() {
 			<BrowserRouter>
 				<MainLayout>
 					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/category' element={<Category />} />
-						<Route path='/category/recipe' element={<Recipe />} />
-						<Route path='/timer' element={<Timer />} />
+						<Route path='/recipes_pwa' element={<Home />} />
+						<Route path='/recipes_pwa/category' element={<Category />} />
+						<Route path='/recipes_pwa/category/recipe' element={<Recipe />} />
+						<Route path='/recipes_pwa/timer' element={<Timer />} />
 						<Route path='*' element={<NotFound />} />
 					</Routes>
 				</MainLayout>

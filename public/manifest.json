@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://christbm.github.io/recipes_pwa/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ff4500",
   "background_color": "#ffffff",

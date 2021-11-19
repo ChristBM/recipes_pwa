@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Recetas</title>
+        <title>Recipes</title>
       </Helmet>
       <div className='home'>
         { homeCategories.length !== 0
@@ -27,7 +27,7 @@ export default function Home() {
                 image={categ.strCategoryThumb}
                 title={categ.strCategory}
                 onClick={ () => {
-                    navigate('/category')
+                    navigate('/recipes_pwa/category')
                     setCategory(categ.strCategory)
                     }
                   }

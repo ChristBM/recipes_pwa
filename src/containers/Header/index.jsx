@@ -49,7 +49,7 @@ export default function Header() {
 	const handleBack = () => {
 		location.pathname === '/recipes_pwa/category/recipe'
 			? navigate('/recipes_pwa/category')
-			: navigate('/recipes_pwa')
+			: navigate('/recipes_pwa/')
 	}
 
 	return (
@@ -67,7 +67,7 @@ export default function Header() {
 					/>
 				</button>
 			) : null}
-			<Link to='/recipes_pwa' className='header__link'>
+			<Link to='/recipes_pwa/' className='header__link'>
 				{state.title}
 			</Link>
 			{ offline

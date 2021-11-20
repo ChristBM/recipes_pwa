@@ -10,7 +10,7 @@ const initialState = {
 
 const reducer = (state, action) => {
 	switch (action.type) {
-		case '/recipes_pwa':
+		case '/recipes_pwa/':
 			return { title: 'Delicious Dishes', btn_back: false }
 		case '/recipes_pwa/category':
 			return { title: 'Select A Recipe', btn_back: true }

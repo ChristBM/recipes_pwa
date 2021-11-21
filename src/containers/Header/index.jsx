@@ -12,6 +12,8 @@ const reducer = (state, action) => {
 	switch (action.type) {
 		case '/recipes_pwa/':
 			return { title: 'Delicious Dishes', btn_back: false }
+		case '/recipes_pwa':
+			return { title: 'Delicious Dishes', btn_back: false }
 		case '/recipes_pwa/category':
 			return { title: 'Select A Recipe', btn_back: true }
 		case '/recipes_pwa/category/recipe':
@@ -19,12 +21,11 @@ const reducer = (state, action) => {
 		case '/recipes_pwa/timer':
 			return { title: 'Timer', btn_back: true }
 		default:
-			return { title: 'Back Home', btn_back: false }
+			return { title: 'Back Home', btn_back: true }
 	}
 }
 
 export default function Header() {
-
 	const [ offline, setOffline ] = useState(false)
 	const [ state, dispatch ] = useReducer(reducer, initialState)
 
@@ -49,7 +50,7 @@ export default function Header() {
 	const handleBack = () => {
 		location.pathname === '/recipes_pwa/category/recipe'
 			? navigate('/recipes_pwa/category')
-			: navigate('/recipes_pwa/')
+			: navigate('/recipes_pwa')
 	}
 
 	return (
@@ -70,10 +71,7 @@ export default function Header() {
 			<Link to='/recipes_pwa/' className='header__link'>
 				{state.title}
 			</Link>
-			{ offline
-					? <p className='header__offline'>Offline</p>
-					: null
-			}
+			{offline ? <p className='header__offline'>Offline</p> : null}
 		</header>
 	)
 }

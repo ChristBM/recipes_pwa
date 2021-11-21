@@ -6,69 +6,99 @@
   min-height: 100vh;
   padding-block-start: 60px;
   padding-block-end: 40px;
+  position: relative;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
+  &__confeti {
+    position: absolute;
+    top: 80px;
+    z-index: 5;
+  }
+
   &__container {
-    display: grid;
+    display: flex;
     width: 300px;
     height: 300px;
-    border-radius: 50% 50% 5px 5px;
-    grid-template-rows: 1fr 80px;
-    background-color: $white-color;
-    box-shadow: 0 0 5px $font-color;
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    background-image: url('../../assets/stopwatch.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__input_container {
-    place-self: center;
-    grid-row: 1/2;
     display: flex;
     width: 100%;
     height: auto;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
   }
 
   &__input {
     width: 80px;
     height: 50px;
     padding: 0 10px;
+    margin-block-end: 30px;
     border-style: none;
     outline: none;
     border: 1px solid $main-color;
     border-radius: 5px;
-    background-color: $white-color;
     @include font-style(Helvetica, 600, 2.6rem, 0px, $font-color);
   }
 
   &__counter {
-    place-self: center;
-    grid-row: 1/2;
-    @include font-style(Helvetica, 600, 5rem, 1px, $main-color);
-  }
-
-  &__btns_container {
-    place-self: end;
-    grid-row: 2/3;
     display: flex;
     width: 100%;
     height: auto;
-    padding-block-end: 20px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__counter_text {
+    margin-block-end: 30px;
+    @include font-style(Helvetica, 600, 5rem, 1px, $main-color);
   }
 
   &__btn {
-    width: 90px;
+    width: 80px;
     height: 50px;
+    position: absolute;
+    top: -55px;
     border-style: none;
     outline: none;
     border-radius: 5px;
     background-color: $main-color;
     cursor: pointer;
     @include font-style(Helvetica, 400, 2rem, 1px, $white-color);
+    transition: transform 200ms ease-out;
+  }
+
+  .play {
+    transform: translateY(3px);
+  }
+  .play:active {
+    transform: translateY(10px);
+    transition: transform 100ms ease-in;
+  }
+
+  .stop {
+    transform: translateX(-115px) translateY(50px) rotate(-45deg);
+  }
+  .stop:active {
+    transform: translateX(-110px) translateY(55px) rotate(-45deg);
+    transition: transform 100ms ease-in;
+  }
+
+  .reset {
+    transform: translateX(115px) translateY(50px) rotate(45deg);
+  }
+  .reset:active {
+    transform: translateX(110px) translateY(55px) rotate(45deg);
+    transition: transform 100ms ease-in;
   }
 
   &__btn:hover {

@@ -6,7 +6,7 @@
   min-height: 100vh;
   padding-block-start: 60px;
   padding-block-end: 40px;
-  grid-template-rows: 450px 80px auto auto 30px;
+  grid-template-rows: 450px minmax(80px, auto) auto auto 30px;
   row-gap: 25px;
 
   &__image_container {
@@ -22,7 +22,7 @@
 
   &__image {
     width: 100%;
-    min-width: 320px;
+    min-width: 300px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
@@ -35,20 +35,58 @@
     width: 100%;
     max-width: 450px;
     height: 100%;
-    padding-inline: 20px;
+    padding: 5px 20px;
     border-radius: 5px;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     background-color: $main-color;
   }
 
+  &__texts_g1 {
+    display: flex;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
   &__title {
-    @include font-style( $main-font, 500, 2.2rem, 1px, white);
+    @include font-style( $main-font, 500, 2rem, 1px, white);
   }
 
   &__subtitle {
-    @include font-style( Helvetica, 500, 1.8rem, 0px, white);
+    @include font-style( Helvetica, 500, 1.6rem, 0px, white);
+  }
+
+  &__texts_g2 {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn-share {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $white-color;
+  }
+
+  &__btn_subtitle {
+    @include font-style(Helvetica, 300, 1.4rem, 0px, $white-color);
+  }
+
+  &__texts_g2:hover {
+    opacity: 0.8;
   }
 
   &__ingredients_list {

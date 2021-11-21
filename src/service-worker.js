@@ -72,7 +72,7 @@ self.addEventListener('message', (event) => {
 
 // Any other custom service worker logic can go here.
 registerRoute(
-  new RegExp(/^https?:\/\/www.themealdb.com\/images\/.*/),
+  ({url}) => url.origin === 'https://www.themealdb.com/images',
   new CacheFirst({
     cacheName: 'img-cache',
     plugins: [
@@ -102,6 +102,15 @@ registerRoute(
 )
 
 registerRoute(
-  new RegExp( /^https?:\/\/christbm.github.io\/recipes_pwa\/.*/ ),
-  new NetworkFirst()
+  ({url}) => url.origin === 'https://christbm.github.io/recipes_pwa',
+  new NetworkFirst({
+    networkTimeoutSeconds: 3,
+    cacheName: 'recipes_pwa',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 20,
+        maxAgeSeconds: 10 * 60,
+      }),
+    ],
+  })
 )

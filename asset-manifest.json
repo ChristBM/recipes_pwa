@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/recipes_pwa/static/css/main.09750002.chunk.css",
-    "main.js": "/recipes_pwa/static/js/main.77c9ad78.chunk.js",
-    "main.js.map": "/recipes_pwa/static/js/main.77c9ad78.chunk.js.map",
-    "runtime-main.js": "/recipes_pwa/static/js/runtime-main.9f7cde96.js",
-    "runtime-main.js.map": "/recipes_pwa/static/js/runtime-main.9f7cde96.js.map",
-    "static/js/2.acc9234f.chunk.js": "/recipes_pwa/static/js/2.acc9234f.chunk.js",
-    "static/js/2.acc9234f.chunk.js.map": "/recipes_pwa/static/js/2.acc9234f.chunk.js.map",
-    "static/js/3.4d6a7f2a.chunk.js": "/recipes_pwa/static/js/3.4d6a7f2a.chunk.js",
-    "static/js/3.4d6a7f2a.chunk.js.map": "/recipes_pwa/static/js/3.4d6a7f2a.chunk.js.map",
+    "main.css": "/recipes_pwa/static/css/main.86c3ce9d.chunk.css",
+    "main.js": "/recipes_pwa/static/js/main.48cacbdc.chunk.js",
+    "main.js.map": "/recipes_pwa/static/js/main.48cacbdc.chunk.js.map",
+    "runtime-main.js": "/recipes_pwa/static/js/runtime-main.b30b305a.js",
+    "runtime-main.js.map": "/recipes_pwa/static/js/runtime-main.b30b305a.js.map",
+    "static/js/2.2450d7b6.chunk.js": "/recipes_pwa/static/js/2.2450d7b6.chunk.js",
+    "static/js/2.2450d7b6.chunk.js.map": "/recipes_pwa/static/js/2.2450d7b6.chunk.js.map",
+    "static/js/3.260f6854.chunk.js": "/recipes_pwa/static/js/3.260f6854.chunk.js",
+    "static/js/3.260f6854.chunk.js.map": "/recipes_pwa/static/js/3.260f6854.chunk.js.map",
     "index.html": "/recipes_pwa/index.html",
     "service-worker.js": "/recipes_pwa/service-worker.js",
     "service-worker.js.map": "/recipes_pwa/service-worker.js.map",
-    "static/css/main.09750002.chunk.css.map": "/recipes_pwa/static/css/main.09750002.chunk.css.map",
-    "static/js/2.acc9234f.chunk.js.LICENSE.txt": "/recipes_pwa/static/js/2.acc9234f.chunk.js.LICENSE.txt"
+    "static/css/main.86c3ce9d.chunk.css.map": "/recipes_pwa/static/css/main.86c3ce9d.chunk.css.map",
+    "static/js/2.2450d7b6.chunk.js.LICENSE.txt": "/recipes_pwa/static/js/2.2450d7b6.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/recipes_pwa/static/media/stopwatch.86a9424c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f7cde96.js",
-    "static/js/2.acc9234f.chunk.js",
-    "static/css/main.09750002.chunk.css",
-    "static/js/main.77c9ad78.chunk.js"
+    "static/js/runtime-main.b30b305a.js",
+    "static/js/2.2450d7b6.chunk.js",
+    "static/css/main.86c3ce9d.chunk.css",
+    "static/js/main.48cacbdc.chunk.js"
   ]
 }

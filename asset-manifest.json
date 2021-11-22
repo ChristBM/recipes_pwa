@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/recipes_pwa/static/css/main.86c3ce9d.chunk.css",
-    "main.js": "/recipes_pwa/static/js/main.48cacbdc.chunk.js",
-    "main.js.map": "/recipes_pwa/static/js/main.48cacbdc.chunk.js.map",
+    "main.css": "/recipes_pwa/static/css/main.f05c1763.chunk.css",
+    "main.js": "/recipes_pwa/static/js/main.863a3a9a.chunk.js",
+    "main.js.map": "/recipes_pwa/static/js/main.863a3a9a.chunk.js.map",
     "runtime-main.js": "/recipes_pwa/static/js/runtime-main.b30b305a.js",
     "runtime-main.js.map": "/recipes_pwa/static/js/runtime-main.b30b305a.js.map",
     "static/js/2.2450d7b6.chunk.js": "/recipes_pwa/static/js/2.2450d7b6.chunk.js",
@@ -12,14 +12,14 @@
     "index.html": "/recipes_pwa/index.html",
     "service-worker.js": "/recipes_pwa/service-worker.js",
     "service-worker.js.map": "/recipes_pwa/service-worker.js.map",
-    "static/css/main.86c3ce9d.chunk.css.map": "/recipes_pwa/static/css/main.86c3ce9d.chunk.css.map",
+    "static/css/main.f05c1763.chunk.css.map": "/recipes_pwa/static/css/main.f05c1763.chunk.css.map",
     "static/js/2.2450d7b6.chunk.js.LICENSE.txt": "/recipes_pwa/static/js/2.2450d7b6.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/recipes_pwa/static/media/stopwatch.86a9424c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b30b305a.js",
     "static/js/2.2450d7b6.chunk.js",
-    "static/css/main.86c3ce9d.chunk.css",
-    "static/js/main.48cacbdc.chunk.js"
+    "static/css/main.f05c1763.chunk.css",
+    "static/js/main.863a3a9a.chunk.js"
   ]
 }

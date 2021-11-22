@@ -17,6 +17,7 @@ export default function App() {
 			<BrowserRouter>
 				<MainLayout>
 					<Routes>
+
 						<Route path='/recipes_pwa' element={<Home />} />
 						<Route path='/recipes_pwa/' element={<Home />} />
 						<Route path='/recipes_pwa/category' element={<Category />} />
